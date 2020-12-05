@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue');
+@import url('https://fonts.googleapis.com/css2?family=Arapey');
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe');
+
+.home-bg{
+    background-image: url("../../assets/home-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    margin: 0px;
+}
+
+.uni-name{
+    font-family: 'Playfair Display';
+    font-weight: bolder;
+    font-size: 60px;
+    color: palevioletred;
+}
+
+.uni-name-div{
+    padding-top: 50px;
+}
