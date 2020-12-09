@@ -2,9 +2,11 @@ body {
     overflow-x: hidden;
   }
 
-/* #wrapper {
-    background: black;
-} */
+#wrapper {
+    background: url('../../assets/home-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
 #logo, .tabs {
     padding-top: 20px;
