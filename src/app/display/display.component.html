@@ -1,0 +1,15 @@
+<div id="page-content-wrapper">
+
+    <div class="container fluid">
+        <h1 id="page-title" class="mt-4">
+            <span style="color: pink;">Student </span >
+            <span style="color: white;">Portal</span>
+        </h1>
+  </div>
+
+  <div id="main-display" class="container-fluid">
+    <app-courses
+        *ngFor="let c of courses;"
+        [course]="c"></app-courses>
+  </div>
+</div>
