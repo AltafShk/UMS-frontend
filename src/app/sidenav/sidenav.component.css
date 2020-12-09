@@ -1,0 +1,49 @@
+body {
+    overflow-x: hidden;
+  }
+
+/* #wrapper {
+    background: black;
+} */
+
+#logo, .tabs {
+    padding-top: 20px;
+    border-radius: 100%;
+    width: 70px;
+    height: auto;
+}
+
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+#sidebar-wrapper .list-group {
+    width: 10rem;
+}
+#page-content-wrapper {
+    min-width: 100vw;
+}
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+@media (min-width: 0px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+        width: 80px;
+        background: url('../../assets/images/blur bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
