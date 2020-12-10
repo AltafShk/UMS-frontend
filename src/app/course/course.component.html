@@ -1,24 +1,52 @@
-<div id="page-content-wrapper">
+<div class="d-flex" id="wrapper">
 
-    <div class="container fluid">
-        <h1 id="page-title" class="mt-4">
-            <span style="color: pink;"> {{course_name}} </span >
-        </h1>
-  </div>
-<div id="display-area" class="container fluid">
-    <div class="row">
-        <div id="main-display" class="col-sm-3">
-                <div class="list-items"><br/>
-                  <div class="menu-item">Home</div>
-                  <div class="menu-item">Grades</div>
-                  <div class="menu-item">Quizzes</div>
-                  <div class="menu-item">Attendance</div>
-                </div>
-        </div>
-        <div  id="main-display" class="col-sm-7">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <img id="logo" src="../../assets/images/uni logo.png">
+      <div class="list-group list-group-flush">
+        <nav>
+          <a routerLink="/my-account">
+            <img class="tabs" src="../../assets/images/icons/my account.png">
+          </a>
+          <a routerLink="/announcements">
+            <img class="tabs" src="../../assets/images/icons/announcements.png">
+          </a>
+          <a routerLink="/courses">
+            <img class="tabs" src="../../assets/images/icons/courses.png">
+          </a>
+          <a routerLink="/help">
+            <img class="tabs" src="../../assets/images/icons/help.png">
+          </a>
+        </nav>
+        <router-outlet></router-outlet>
+        
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+  
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
 
+        <div class="container fluid">
+            <h1 id="page-title" class="mt-4">
+                <span style="color: pink;"> {{course_name}} </span >
+            </h1>
+    </div>
+    <div id="display-area" class="container fluid">
+        <div class="row">
+            <div id="main-display" class="col-sm-3">
+                    <div class="list-items"><br/>
+                    <div class="menu-item">Home</div>
+                    <div class="menu-item">Grades</div>
+                    <div class="menu-item">Quizzes</div>
+                    <div class="menu-item">Attendance</div>
+                    </div>
+            </div>
+            <div  id="main-display" class="col-sm-7">
+
+            </div>
         </div>
     </div>
-</div>
   
+    </div>
 </div>

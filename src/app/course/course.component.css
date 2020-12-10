@@ -1,7 +1,7 @@
 #page-title {
     padding-top: 10px;
     padding-bottom: 0px;
-    margin-left: 80px;
+    margin-left: 100px;
     font-family: 'playfair display';
     font-weight: bold;
 }
@@ -11,7 +11,6 @@
     padding: .75rem 1.25rem;
     width:100%;
     color: rgba(255, 255, 255, 0.582);
-    font-family: 'open sans light';
     font-size: 130%;
 }
 
@@ -33,3 +32,63 @@
 #page-content-wrapper {
     width: 100%;
 }
+
+body {
+    overflow-x: hidden;
+  }
+
+#wrapper {
+    background: url('../../assets/home-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#logo, .tabs {
+    padding-top: 20px;
+    border-radius: 100%;
+    width: 70px;
+    height: auto;
+}
+
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+#sidebar-wrapper .list-group {
+    width: 10rem;
+}
+#page-content-wrapper {
+    min-width: 100vw;
+}
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+@media (min-width: 0px) {
+    #page-content-wrapper {
+        min-width: 0;
+        width: 90%;
+    }
+
+    #sidebar-wrapper {
+        margin-left: 0;
+        width: 80px;
+        background: url('../../assets/images/blur bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+
+a{ display:block;}

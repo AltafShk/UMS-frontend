@@ -6,10 +6,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-  @Input() course;
+  courses:any[]=['Linear Algebra', 'Calculus', 'Algorithms', 'PAMSA', 'Web & App Dev'];
   // @Output() courseChanged = new EventEmitter<{course: string}>();
 
-  constructor() { }
+  constructor() { } 
 
   ngOnInit(): void {
   }
