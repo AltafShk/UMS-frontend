@@ -1,0 +1,19 @@
+#page-title {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-left:20px;
+    font-family: playfair display;
+    font-weight: bold;
+}
+
+#main-display {
+    margin-left: 60px;
+    background: url('../../assets/images/blur bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    width: 85vw;
+    border:1px solid black;
+    color: white;
+    padding: 20px;
+}

@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "university-management-system"
+    }
+  },
+  "defaultProject": "university-management-system",
+  "cli": {
+    "analytics": "e2089641-633a-4d6c-b439-124eac1d9309"
+  }
 }

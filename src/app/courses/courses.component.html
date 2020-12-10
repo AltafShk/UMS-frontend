@@ -1,4 +1,15 @@
-<div class="course-card">
-    <div class="card"><div class="class-color"></div></div>
-    <div class="course-name" (click)="openCoursePage()">{{ course }}</div>
+<div id="page-content-wrapper">
+    <div class="container fluid">
+    <h1 id="page-title" class="mt-4">
+        <span style="color: pink;">Student </span >
+        <span style="color: white;">Portal</span>
+    </h1>
+    </div>
+    <div id="main-display" class="container-fluid">
+        <app-course-card id="class-card"
+            *ngFor="let course of courses;"
+            [course]="course">
+        </app-course-card>
+    </div>
 </div>
+
