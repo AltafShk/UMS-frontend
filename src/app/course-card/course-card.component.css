@@ -1,0 +1,49 @@
+.card {
+    height: 150px;
+    width: 150px;
+    background: rgb(231, 137, 248);
+    border: 1px solid black;
+}
+
+.class-color {
+    height: 120px;
+    width: 120px;
+    border: 1px solid black;
+    background-color: rgb(103, 54, 158);
+    border-radius: 100px;
+    margin:auto;
+}
+
+.course-name {
+    height: 30px;
+    width: 150px;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    font-family: cardo;
+    font-weight: bold;
+    font-size: large;
+    background: rgb(171, 95, 201);
+
+}
+#page-title {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-left:20px;
+    font-family: playfair display;
+    font-weight: bold;
+}
+
+#main-display {
+    margin-left: 60px;
+    background: url('../../assets/images/blur bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    width: 85vw;
+    border:1px solid black;
+    color: white;
+    padding: 20px;
+}
+
+

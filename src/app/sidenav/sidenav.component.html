@@ -1,20 +1,33 @@
 <div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <img id="logo" src="../../assets/images/uni logo.png">
-      <div class="list-group list-group-flush">
-        <a href="#" ><img class="tabs" src="../../assets/images/icons/my account.png"></a>
-        <a href="#" ><img class="tabs" src="../../assets/images/icons/announcements.png"></a>
-        <a href="#" ><img class="tabs" src="../../assets/images/icons/courses.png"></a>
-        <a href="#" ><img class="tabs" src="../../assets/images/icons/help.png"></a>
-	  </div>
-	</div>
-    <!-- /#sidebar-wrapper -->
-
-	<!-- Page Content -->
-	<app-course></app-course>
-    <!-- /#page-content-wrapper -->
-
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <img id="logo" src="../../assets/images/uni logo.png">
+    <div class="list-group list-group-flush">
+      <nav>
+        <a routerLink="/my-account">
+          <img class="tabs" src="../../assets/images/icons/my account.png">
+        </a>
+        <a routerLink="/announcements">
+          <img class="tabs" src="../../assets/images/icons/announcements.png">
+        </a>
+        <a routerLink="/courses">
+          <img class="tabs" src="../../assets/images/icons/courses.png">
+        </a>
+        <a routerLink="/help">
+          <img class="tabs" src="../../assets/images/icons/help.png">
+        </a>
+      </nav>
+      <!-- <router-outlet></router-outlet> -->
+      
   </div>
-  <!-- /#wrapper -->
+</div>
+  <!-- /#sidebar-wrapper -->
+
+<!-- Page Content -->
+<router-outlet></router-outlet>
+
+  <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
