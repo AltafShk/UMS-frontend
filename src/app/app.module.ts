@@ -8,11 +8,13 @@ import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DisplayComponent } from './display/display.component';
 import { HomeComponent } from './home/home.component';
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    CourseComponent,
     CoursesComponent,
     SidenavComponent,
     DisplayComponent
