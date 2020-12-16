@@ -13,8 +13,10 @@ export class CoursegradesComponent implements OnInit {
   private routeSub: Subscription;
   constructor(private route: ActivatedRoute) { }
 
+  
+
   course_name: String;
-  quizzes = Array<any>();     // TODO:change type any to object when retrieve from backend
+  quizzes = Array<Object>();     // TODO:change type any to object when retrieve from backend
 
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
@@ -40,8 +42,11 @@ export class CoursegradesComponent implements OnInit {
         map.set(11, "Nov");
         map.set(11, "Dec");
 
-        var obj = {name: 'Quiz ' + (index+1).toString(), date: map.get(month) + " " +  day.toString(), score: Math.floor(Math.random() * 10), total: 10}
-        this.quizzes[index] = obj;
+        var obj = 
+        this.quizzes.push({name: 'Quiz ' + (index+1).toString(), 
+        date: map.get(month) + " " +  day.toString(), 
+        score: Math.floor(Math.random() * 10), 
+        total: 10});
     }
   }
 

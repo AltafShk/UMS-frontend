@@ -20,7 +20,8 @@ const routes: Routes = [{path:'', component: CoursesComponent},
                         {path: 'course/:id/home', component:CoursehomeComponent},
                         {path: 'course/:id/quizzes', component:CoursequizzesComponent},
                         {path: 'course/:id/grades', component:CoursegradesComponent},
-                        {path: 'course/:id/attendance', component:CourseattendanceComponent}];
+                        {path: 'course/:id/attendance', component:CourseattendanceComponent},
+                        {path: 'course/:id/quizzes/:quizid', component:QuizDescComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

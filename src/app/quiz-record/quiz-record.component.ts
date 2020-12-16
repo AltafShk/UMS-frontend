@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class QuizRecordComponent implements OnInit {
 
-  @Input() quiz: Object;
+  @Input() quiz: any;
 
   constructor() { }
 
