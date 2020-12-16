@@ -9,6 +9,7 @@ import { CoursehomeComponent } from './coursehome/coursehome.component';
 import { CoursequizzesComponent } from './coursequizzes/coursequizzes.component';
 import { CoursegradesComponent } from './coursegrades/coursegrades.component';
 import { CourseattendanceComponent } from './courseattendance/courseattendance.component';
+import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
 
 const routes: Routes = [{path:'', component: CoursesComponent},
                         {path:'courses', component:CoursesComponent},

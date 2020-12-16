@@ -19,7 +19,12 @@
                 </div>
         </div>
         <div  id="main-display" class="col-sm-8">
-            <p>This is the course home page for the course {{course_name}} offered at Some University.</p>
+            <p class="head-text">Available Quizzes</p>
+
+                <app-quiz-available id="available-quizzes"
+                    *ngFor="let quiz of quizzes;"
+                    [quiz]="quiz">
+                </app-quiz-available>
         </div>
     </div>
 </div>

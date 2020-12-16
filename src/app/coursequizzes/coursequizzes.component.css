@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+
 #page-title {
     padding-top: 10px;
     padding-bottom: 0px;
@@ -38,3 +41,12 @@ a {
     text-decoration: none;
 }
 
+.head-text{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    color: antiquewhite; 
+    font-size: 17px;  
+    letter-spacing: 1px;
+}

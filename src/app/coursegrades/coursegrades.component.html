@@ -22,6 +22,30 @@
             <div class="grades-heading">
                 <p class="head-text">Grades for (name of student)</p>
             </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <p class="column-heading">Name</p>
+                </div>
+                <div class="col-sm-3">
+                    <p class="column-heading">Date</p>
+                </div>
+                <div class="col-sm-3">
+                    <p class="column-heading">Score</p>
+                </div>
+                <div class="col-sm-3">
+                    <p class="column-heading">Total</p>
+                </div>
+                <div>
+                    <hr class="horizontal-line">
+                </div>
+            </div>
+            <div class="quiz-records">
+                <app-quiz-record id="quiz-marks-row"
+                    *ngFor="let quiz of quizzes;"
+                    [quiz]="quiz">
+                </app-quiz-record>
+            </div>
         </div>
     </div>
 </div>

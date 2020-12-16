@@ -16,6 +16,9 @@ import { CoursehomeComponent } from './coursehome/coursehome.component';
 import { CoursegradesComponent } from './coursegrades/coursegrades.component';
 import { CoursequizzesComponent } from './coursequizzes/coursequizzes.component';
 import { CourseattendanceComponent } from './courseattendance/courseattendance.component';
+import { QuizRecordComponent } from './quiz-record/quiz-record.component';
+import { QuizAvailableComponent } from './quiz-available/quiz-available.component';
+import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { CourseattendanceComponent } from './courseattendance/courseattendance.c
     CoursehomeComponent,
     CoursegradesComponent,
     CoursequizzesComponent,
-    CourseattendanceComponent
+    CourseattendanceComponent,
+    QuizRecordComponent,
+    QuizAvailableComponent,
+    QuizDescComponent
   ],
   imports: [
     BrowserModule,
