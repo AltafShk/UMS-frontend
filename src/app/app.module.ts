@@ -12,6 +12,10 @@ import { AnnouncementsComponent } from './announcements/announcements.component'
 import { CourseCardComponent } from './course-card/course-card.component';
 import { HelpComponent } from './help/help.component';
 import { MyAccountComponent } from './my-account/my-account.component';
+import { CoursehomeComponent } from './coursehome/coursehome.component';
+import { CoursegradesComponent } from './coursegrades/coursegrades.component';
+import { CoursequizzesComponent } from './coursequizzes/coursequizzes.component';
+import { CourseattendanceComponent } from './courseattendance/courseattendance.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { MyAccountComponent } from './my-account/my-account.component';
     HelpComponent,
     MyAccountComponent,
     AnnouncementsComponent,
-    CourseCardComponent
+    CourseCardComponent,
+    CoursehomeComponent,
+    CoursegradesComponent,
+    CoursequizzesComponent,
+    CourseattendanceComponent
   ],
   imports: [
     BrowserModule,

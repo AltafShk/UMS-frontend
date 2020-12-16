@@ -1,26 +1,28 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Subscription} from 'rxjs'
 import {ActivatedRoute} from '@angular/router'
 
 @Component({
-  selector: 'app-course',
-  templateUrl: './course.component.html',
-  styleUrls: ['./course.component.css']
+  selector: 'app-coursehome',
+  templateUrl: './coursehome.component.html',
+  styleUrls: ['./coursehome.component.css']
 })
-export class CourseComponent implements OnInit {
-  course_name: string;
+export class CoursehomeComponent implements OnInit {
+
   private routeSub: Subscription;
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  course_name: String;
+
+  ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
       this.course_name = params['id'];
     });
   }
 
+
   ngOnDestroy() {
     this.routeSub.unsubscribe();
   }
-
 
 }
