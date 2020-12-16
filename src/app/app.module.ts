@@ -19,6 +19,7 @@ import { CourseattendanceComponent } from './courseattendance/courseattendance.c
 import { QuizRecordComponent } from './quiz-record/quiz-record.component';
 import { QuizAvailableComponent } from './quiz-available/quiz-available.component';
 import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
+import { AttendanceRecordComponent } from './attendance-record/attendance-record.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
     CourseattendanceComponent,
     QuizRecordComponent,
     QuizAvailableComponent,
-    QuizDescComponent
+    QuizDescComponent,
+    AttendanceRecordComponent
   ],
   imports: [
     BrowserModule,

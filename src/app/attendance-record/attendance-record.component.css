@@ -1,0 +1,9 @@
+.column-heading{
+    background: rgba(255, 255, 255, 0);
+    padding: .75rem 1.25rem;
+    width:100%;
+    color: rgba(255, 255, 255, 0.582);
+    font-size: 130%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}

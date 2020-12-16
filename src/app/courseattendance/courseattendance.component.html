@@ -19,8 +19,30 @@
                 </div>
         </div>
         <div  id="main-display" class="col-sm-8">
-            <p>This is the course home page for the course {{course_name}} offered at Some University.</p>
-        </div>
+            <div class="attendance-heading">
+                <p class="head-text">Attendance for (name of student)</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <p class="column-heading">Date</p>
+                </div>
+                <div class="col-sm-2">
+                    <p class="column-heading">Present</p>
+                </div>
+                <div class="col-sm-2">
+                    <p class="column-heading">Absent</p>
+                </div>
+                <div>
+                    <hr class="horizontal-line">
+                </div>
+            </div>
+            <div class="attendance-records">
+                <app-attendance-record id="attendances-row"
+                    *ngFor="let record of records;"
+                    [record]="record">
+                </app-attendance-record>
+            </div>
     </div>
 </div>
 
