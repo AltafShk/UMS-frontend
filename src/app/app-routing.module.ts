@@ -10,8 +10,9 @@ import { CoursequizzesComponent } from './coursequizzes/coursequizzes.component'
 import { CoursegradesComponent } from './coursegrades/coursegrades.component';
 import { CourseattendanceComponent } from './courseattendance/courseattendance.component';
 import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
+import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [{path:'', component: CoursesComponent},
+const routes: Routes = [
                         {path:'courses', component:CoursesComponent},
                         {path:'help', component:HelpComponent},
                         {path:'my-account', component:MyAccountComponent},

@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CommonModule } from '@angular/common';
@@ -44,7 +46,9 @@ import { AttendanceRecordComponent } from './attendance-record/attendance-record
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
