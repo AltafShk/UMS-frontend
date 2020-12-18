@@ -10,6 +10,7 @@ import { CoursequizzesComponent } from './coursequizzes/coursequizzes.component'
 import { CoursegradesComponent } from './coursegrades/coursegrades.component';
 import { CourseattendanceComponent } from './courseattendance/courseattendance.component';
 import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
+import { HomeComponent } from './home/home.component';
 import { CoursefacultyComponent } from './coursefaculty/coursefaculty.component';
 import { CoursefacultyquizzesComponent } from './coursefacultyquizzes/coursefacultyquizzes.component';
 import { CoursefacultyPastquizzesComponent } from './coursefaculty-pastquizzes/coursefaculty-pastquizzes.component';
@@ -17,7 +18,7 @@ import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 import { QuizFacultyDescComponent } from './quiz-faculty-desc/quiz-faculty-desc.component';
 import { CoursefacultygradesComponent } from './coursefacultygrades/coursefacultygrades.component';
 
-const routes: Routes = [{path:'', component: CoursesComponent},
+const routes: Routes = [
                         {path:'courses', component:CoursesComponent},
                         {path:'help', component:HelpComponent},
                         {path:'my-account', component:MyAccountComponent},

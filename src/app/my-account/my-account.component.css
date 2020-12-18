@@ -17,3 +17,14 @@
     color: white;
     padding: 20px;
 }
+
+.logout-btn{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    
+}
+
+button{
+    background-color: palevioletred;
+}
