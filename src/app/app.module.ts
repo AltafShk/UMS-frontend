@@ -19,6 +19,14 @@ import { CourseattendanceComponent } from './courseattendance/courseattendance.c
 import { QuizRecordComponent } from './quiz-record/quiz-record.component';
 import { QuizAvailableComponent } from './quiz-available/quiz-available.component';
 import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
+import { CoursefacultyComponent } from './coursefaculty/coursefaculty.component';
+import { CoursefacultyhomeComponent } from './coursefacultyhome/coursefacultyhome.component';
+import { CoursefacultygradesComponent } from './coursefacultygrades/coursefacultygrades.component';
+import { CoursefacultyquizzesComponent } from './coursefacultyquizzes/coursefacultyquizzes.component';
+import { CoursefacultyattendanceComponent } from './coursefacultyattendance/coursefacultyattendance.component';
+import { QuizAvailableFacultyComponent } from './quiz-available-faculty/quiz-available-faculty.component';
+import { CoursefacultyPastquizzesComponent } from './coursefaculty-pastquizzes/coursefaculty-pastquizzes.component';
+import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +45,15 @@ import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
     CourseattendanceComponent,
     QuizRecordComponent,
     QuizAvailableComponent,
-    QuizDescComponent
+    QuizDescComponent,
+    CoursefacultyComponent,
+    CoursefacultyhomeComponent,
+    CoursefacultygradesComponent,
+    CoursefacultyquizzesComponent,
+    CoursefacultyattendanceComponent,
+    QuizAvailableFacultyComponent,
+    CoursefacultyPastquizzesComponent,
+    CreateQuizComponent,
   ],
   imports: [
     BrowserModule,

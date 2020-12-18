@@ -1,0 +1,78 @@
+<!-- Page Content -->
+<div id="page-content-wrapper">
+
+    <div class="container fluid">
+        <h1 id="page-title" class="mt-4">
+            <span style="color: pink;"> {{course_name}} </span >
+        </h1>
+
+</div>
+<div id="display-area" class="container fluid">
+    <div class="row">
+        <div id="main-display" class="col-sm-3">
+                <div class="list-items"><br/>
+                <nav>
+                    <a routerLink="/coursefaculty/{{course_name}}/home"><div class="menu-item">Home</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/grades"><div class="menu-item">View Grades</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/quizzes"><div class="menu-item">Current Quizzes</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/pastquizzes"><div class="menu-item">Grade Quizzes</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/attendance"><div class="menu-item">Mark Attendance</div></a>
+                </nav>
+                </div>
+        </div>
+        <div  id="main-display" class="col-sm-8" >
+            <div  class="heading">
+                <a routerLink = "/coursefaculty/{{course_name}}/quizzes"><img class="back" src="../../assets/images/icons/back_button.png"></a>
+                <p class="head-text">Create Quiz:</p>
+            </div>
+        
+            <div>
+                <div class="row">
+                <div class="titles col-sm-2">
+                    <p>Quiz name: </p>
+                </div>
+                <div class="col-sm-6">
+                    <input size ="30" type="text" id="qname" name="qname" style=" border: 2px solid palevioletred">
+                </div>
+                </div >
+                <div class="row">
+                    <div class="titles col-sm-2">
+                        <p>Total Marks: </p>
+                    </div>
+                    <div class="col-sm-6 " >
+                        <input size ="20" type="number" id="marks" name="marks" style=" border: 2px solid palevioletred">
+                    </div>
+                </div >
+                <div class="row">
+                    <div class="titles col-sm-2">
+                        <p>Due Date:</p>
+                    </div>
+                    <div class= "col-sm-6">
+                        <input type="date" id="quizdate" name="quizdate" style=" border: 2px solid palevioletred">
+                    </div>
+                </div>
+                <div>
+                    <div class="titles inline">
+                        <p>Description:</p>
+                    </div>
+                    <div>
+                        <input class="textarea" id="qdisc" name="qdisc" >
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <input type="file">
+                </div>
+
+            </div>
+            <div style="float: right; margin-bottom: 5px;" >
+                <button class="btn"> Create quiz!</button>
+            </div>
+
+            
+        </div>
+
+    </div>
+</div>
+
+</div>
