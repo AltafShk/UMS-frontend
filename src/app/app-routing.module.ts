@@ -14,6 +14,8 @@ import { CoursefacultyComponent } from './coursefaculty/coursefaculty.component'
 import { CoursefacultyquizzesComponent } from './coursefacultyquizzes/coursefacultyquizzes.component';
 import { CoursefacultyPastquizzesComponent } from './coursefaculty-pastquizzes/coursefaculty-pastquizzes.component';
 import { CreateQuizComponent } from './create-quiz/create-quiz.component';
+import { QuizFacultyDescComponent } from './quiz-faculty-desc/quiz-faculty-desc.component';
+import { CoursefacultygradesComponent } from './coursefacultygrades/coursefacultygrades.component';
 
 const routes: Routes = [{path:'', component: CoursesComponent},
                         {path:'courses', component:CoursesComponent},
@@ -29,7 +31,10 @@ const routes: Routes = [{path:'', component: CoursesComponent},
                         {path: 'coursefaculty/:id', component:CoursefacultyComponent},
                         {path: 'coursefaculty/:id/quizzes', component:CoursefacultyquizzesComponent},
                         {path: "coursefaculty/:id/pastquizzes", component:CoursefacultyPastquizzesComponent},
-                        {path: "coursefaculty/:id/createquiz", component:CreateQuizComponent}];
+                        {path: "coursefaculty/:id/createquiz", component:CreateQuizComponent},
+                        {path: "coursefaculty/:id/quizzes/:quizid", component:QuizFacultyDescComponent},
+                      {path: "coursefaculty/:id/quizzes/:quizid/grades", component:CoursefacultygradesComponent}];
+                        
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -19,7 +19,6 @@ import { CourseattendanceComponent } from './courseattendance/courseattendance.c
 import { QuizRecordComponent } from './quiz-record/quiz-record.component';
 import { QuizAvailableComponent } from './quiz-available/quiz-available.component';
 import { QuizDescComponent } from './quiz-desc/quiz-desc.component';
-<<<<<<< HEAD
 import { CoursefacultyComponent } from './coursefaculty/coursefaculty.component';
 import { CoursefacultyhomeComponent } from './coursefacultyhome/coursefacultyhome.component';
 import { CoursefacultygradesComponent } from './coursefacultygrades/coursefacultygrades.component';
@@ -28,9 +27,9 @@ import { CoursefacultyattendanceComponent } from './coursefacultyattendance/cour
 import { QuizAvailableFacultyComponent } from './quiz-available-faculty/quiz-available-faculty.component';
 import { CoursefacultyPastquizzesComponent } from './coursefaculty-pastquizzes/coursefaculty-pastquizzes.component';
 import { CreateQuizComponent } from './create-quiz/create-quiz.component';
-=======
 import { AttendanceRecordComponent } from './attendance-record/attendance-record.component';
->>>>>>> 4b2bbb3df002ae22403ddd7c12fdf018081dac9f
+import { QuizFacultyDescComponent } from './quiz-faculty-desc/quiz-faculty-desc.component';
+import { FacultyGradequizComponent } from './faculty-gradequiz/faculty-gradequiz.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +49,6 @@ import { AttendanceRecordComponent } from './attendance-record/attendance-record
     QuizRecordComponent,
     QuizAvailableComponent,
     QuizDescComponent,
-<<<<<<< HEAD
     CoursefacultyComponent,
     CoursefacultyhomeComponent,
     CoursefacultygradesComponent,
@@ -59,9 +57,9 @@ import { AttendanceRecordComponent } from './attendance-record/attendance-record
     QuizAvailableFacultyComponent,
     CoursefacultyPastquizzesComponent,
     CreateQuizComponent,
-=======
-    AttendanceRecordComponent
->>>>>>> 4b2bbb3df002ae22403ddd7c12fdf018081dac9f
+    AttendanceRecordComponent,
+    QuizFacultyDescComponent,
+    FacultyGradequizComponent
   ],
   imports: [
     BrowserModule,
