@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+
+#page-title {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-left: 50px;
+    font-family: 'playfair display';
+    font-weight: bold;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0);
+    padding: .75rem 1.25rem;
+    width:100%;
+    color: rgba(255, 255, 255, 0.582);
+    font-size: 130%;
+}
+
+#display-area {
+    margin-left: 100px;
+    min-height: 80vh;
+    width: 100vw;
+}
+
+#main-display {
+    margin-right: 20px;
+    background: url('../../assets/images/blur bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    border:1px solid black;
+}
+
+#page-content-wrapper {
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.head-text{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    color: antiquewhite; 
+    font-size: 17px;  
+    letter-spacing: 1px;
+    display: inline;
+}
+
+.back{
+    width: 40px;
+    height: 40px;
+    display: inline;
+}
+
+.heading {
+    margin-top: 15px;
+}
+
+.desc-heading{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    color: antiquewhite; 
+    font-size: 17px;  
+    letter-spacing: 1px;
+}
+
+.desc-text{
+    background: rgba(255, 255, 255, 0);
+    width:100%;
+    color: rgba(255, 255, 255, 0.582);
+    font-size: 13px;
+    margin-left: 10px;
+    max-width: 600px;
+}
+
+.btn {
+    background-color: palevioletred;
+    border-radius: 20px;
+    color: black;
+    font-weight: bolder;
+    margin: 5px;
+}
+

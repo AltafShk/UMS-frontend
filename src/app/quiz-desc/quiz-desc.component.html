@@ -1,1 +1,61 @@
-<p>sjosadjosa</p>
+<!-- Page Content -->
+<div id="page-content-wrapper">
+
+    <div class="container fluid">
+        <h1 id="page-title" class="mt-4">
+            <span style="color: pink;"> {{course_name}} </span >
+        </h1>
+</div>
+<div id="display-area" class="container fluid">
+    <div class="row">
+        <div id="main-display" class="col-sm-3">
+                <div class="list-items"><br/>
+                <nav>
+                    <a routerLink="/course/{{course_name}}/home"><div class="menu-item">Home</div></a>
+                    <a routerLink="/course/{{course_name}}/grades"><div class="menu-item">Grades</div></a>
+                    <a routerLink="/course/{{course_name}}/quizzes"><div class="menu-item">Quizzes</div></a>
+                    <a routerLink="/course/{{course_name}}/attendance"><div class="menu-item">Attendance</div></a>
+                </nav>
+                </div>
+        </div>
+        <div  id="main-display" class="col-sm-8">
+            
+            <div  class="heading">
+                <a routerLink = "/course/{{course_name}}/quizzes"><img class="back" src="../../assets/images/icons/back_button.png"></a>
+                <p class="head-text">{{quiz.name}}</p>
+            </div>
+
+            <app-quiz-available [quiz] = quiz></app-quiz-available>
+
+            <div *ngIf = "notyetsubmitted">
+            <div class="desc">
+                <p class="desc-heading">DESCRIPTION:</p>
+                <p class="desc-text">{{quiz.desc}}</p>
+            </div>
+
+            <div class="luck">
+                <p class="desc-heading">BEST OF LUCK!</p>
+            </div>
+
+            <div class="button">
+                <button class="btn">Download Quiz</button>
+            </div>
+            <div>
+                <div class="btn">
+                    <input type="file">
+                </div>
+            </div>
+            <div>
+                <button class="btn" style="margin-left: 10px;position: absolute; bottom: 5%;width: 700px;" (click) = "submitQuiz()">Submit Quiz</button>
+            </div>
+            </div>
+
+            <div *ngIf = "submitted">
+                <img src="../../assets/images/icons/tick.png" style="width: 200px;height: 200px; position: absolute; top: 30%; left: 35%; margin-top: 20px;">
+                <p class="desc-heading" style="font-size: 20px;position: absolute; top: 70%; left: 32%;">Submitted Successfully</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
