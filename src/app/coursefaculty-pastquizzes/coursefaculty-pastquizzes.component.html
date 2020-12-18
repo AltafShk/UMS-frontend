@@ -1,0 +1,37 @@
+<!-- Page Content -->
+<div id="page-content-wrapper">
+
+    <div class="container fluid">
+        <h1 id="page-title" class="mt-4">
+            <span style="color: pink;"> {{course_name}} </span >
+        </h1>
+</div>
+<div id="display-area" class="container fluid">
+    <div class="row">
+        <div id="main-display" class="col-sm-3">
+                <div class="list-items"><br/>
+                <nav>
+                    <a routerLink="/coursefaculty/{{course_name}}/home"><div class="menu-item">Home</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/grades"><div class="menu-item">View Grades</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/quizzes"><div class="menu-item">Current Quizzes</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/pastquizzes"><div class="menu-item">Grade Quizzes</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/attendance"><div class="menu-item">Mark Attendance</div></a>
+                </nav>
+                </div>
+        </div>
+        <div  id="main-display" class="col-sm-8" >
+            <p class="head-text">Grade Quizzes</p>
+            <div class="available-quizzes">
+                <app-quiz-available-faculty id="available-quizzes"
+                    *ngFor="let quiz of quizzes;"
+                    [quiz]="quiz">
+                </app-quiz-available-faculty>
+                <app-quiz-available-faculty id="available-quizzes"
+                *ngFor="let quiz of quizzes;"
+                [quiz]="quiz">
+            </app-quiz-available-faculty>
+
+    </div>
+</div>
+
+</div>
