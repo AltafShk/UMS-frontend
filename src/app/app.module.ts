@@ -32,6 +32,9 @@ import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 import { AttendanceRecordComponent } from './attendance-record/attendance-record.component';
 import { QuizFacultyDescComponent } from './quiz-faculty-desc/quiz-faculty-desc.component';
 import { FacultyGradequizComponent } from './faculty-gradequiz/faculty-gradequiz.component';
+import { FacultycoursesComponent } from './facultycourses/facultycourses.component';
+import { ParentcoursesComponent } from './parentcourses/parentcourses.component';
+import { CoursefacultyCardComponent } from './coursefaculty-card/coursefaculty-card.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { FacultyGradequizComponent } from './faculty-gradequiz/faculty-gradequiz
     AttendanceRecordComponent,
     QuizFacultyDescComponent,
     FacultyGradequizComponent,
-    AttendanceRecordComponent
+    AttendanceRecordComponent,
+    FacultycoursesComponent,
+    ParentcoursesComponent,
+    CoursefacultyCardComponent
   ],
   imports: [
     BrowserModule,

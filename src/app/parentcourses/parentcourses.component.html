@@ -1,0 +1,11 @@
+<div *ngIf = "isStudent()" >
+    <app-courses></app-courses>
+</div>
+
+<div *ngIf = "isFaculty()">
+    <app-facultycourses></app-facultycourses>
+</div>
+
+<div *ngIf = "isLoading()">
+    "Loading"
+</div>

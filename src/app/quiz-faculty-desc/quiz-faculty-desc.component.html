@@ -12,7 +12,6 @@
                 <div class="list-items"><br/>
                     <nav>
                         <a routerLink="/coursefaculty/{{course_name}}/home"><div class="menu-item">Home</div></a>
-                        <a routerLink="/coursefaculty/{{course_name}}/grades"><div class="menu-item">View Grades</div></a>
                         <a routerLink="/coursefaculty/{{course_name}}/quizzes"><div class="menu-item">Current Quizzes</div></a>
                         <a routerLink="/coursefaculty/{{course_name}}/pastquizzes"><div class="menu-item">Grade Quizzes</div></a>
                         <a routerLink="/coursefaculty/{{course_name}}/attendance"><div class="menu-item">Mark Attendance</div></a>
@@ -23,7 +22,7 @@
             
             <div  class="heading">
                 <a routerLink = "/coursefaculty/{{course_name}}/quizzes" ><img class="back" src="../../assets/images/icons/back_button.png"></a>
-                <p class="head-text">{{quiz.name}}</p>
+                <p class="head-text">{{quiz.quiz_name}}</p>
             </div>
 
             <app-quiz-available-faculty [quiz] = quiz></app-quiz-available-faculty>
@@ -31,25 +30,12 @@
             <div *ngIf = "notyetsubmitted">
             <div class="desc">
                 <p class="desc-heading">DESCRIPTION:</p>
-                <p class="desc-text">{{quiz.desc}}</p>
-            </div>
-
-            <div class="luck">
-                <p class="desc-heading">BEST OF LUCK!</p>
-            </div>
-
-            <div class="button">
-                <button class="btn">Download Quiz</button>
-            </div>
-            <div>
-                <div class="btn">
-                    <input type="file">
-                </div>
+                <p class="desc-text">{{quiz.details}}</p>
             </div>
 
             <div>
-                <a routerLink = "/coursefaculty/{{course_name}}/quizzes/{{quiz.name}}/grades" [state] = quiz>
-                    <button class="btn" style="margin-left: 10px; display: inline;" (click) = "GradeQuiz()">Grade Quiz</button>
+                <a routerLink = "/coursefaculty/{{course_name}}/quizzes/{{quiz.quiz_name}}/grades" [state] = quiz>
+                    <button class="btn" style="margin-left: 10px; display: inline;">Grade Quiz</button>
                 </a>
                 </div>
 

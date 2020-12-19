@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Subscription} from 'rxjs'
 import {ActivatedRoute} from '@angular/router'
+import { BackendService } from '../backend.service';
 
 @Component({
   selector: 'app-coursefacultyquizzes',
@@ -8,10 +9,10 @@ import {ActivatedRoute} from '@angular/router'
   styleUrls: ['./coursefacultyquizzes.component.css']
 })
 export class CoursefacultyquizzesComponent implements OnInit {
-  quizzes = Array<any>();
+  quizzes: any;
 
   private routeSub: Subscription;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private backend: BackendService) {}
 
   course_name: String;
 
@@ -20,30 +21,16 @@ export class CoursefacultyquizzesComponent implements OnInit {
       this.course_name = params['id'];
       console.log(this.course_name);
     });
-
-    for (let index = 0; index < 4; index++) {
-      var d = new Date();
-        var month = d.getMonth();
-        var day = d.getDay();
-        let map = new Map<Number, string>();
-
-        map.set(1, "Jan"); 
-        map.set(2, "Feb");
-        map.set(3, "Mar");
-        map.set(4, "Apr");
-        map.set(5, "May");
-        map.set(6, "Jun");
-        map.set(7, "Jul");
-        map.set(8, "Aug");
-        map.set(9, "Sep");
-        map.set(10, "Oct");
-        map.set(11, "Nov");
-        map.set(11, "Dec");
-
-      var obj = {name: "Quiz " + index.toString(), duedate: map.get(month) + " " +  day.toString() , total: 10 , desc: "Write the sum of 2 + 2"} //TODO: add available attribute from backend
-      
-      this.quizzes[index] = obj;
-    }
+    
+    this.backend.getQuizzesFaculty(localStorage.getItem("token")).subscribe(val => {
+      console.log(val)
+      this.quizzes = []
+      for (let index = 0; index < val.quizzes.length; index++) {
+        if(val.quizzes[index].available === true && val.quizzes[index].course.course_name === this.course_name ){
+          this.quizzes.push(val.quizzes[index]);
+        }
+      }
+    });
   }
 
 

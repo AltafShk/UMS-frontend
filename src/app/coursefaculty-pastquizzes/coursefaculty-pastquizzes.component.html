@@ -12,7 +12,6 @@
                 <div class="list-items"><br/>
                 <nav>
                     <a routerLink="/coursefaculty/{{course_name}}/home"><div class="menu-item">Home</div></a>
-                    <a routerLink="/coursefaculty/{{course_name}}/grades"><div class="menu-item">View Grades</div></a>
                     <a routerLink="/coursefaculty/{{course_name}}/quizzes"><div class="menu-item">Current Quizzes</div></a>
                     <a routerLink="/coursefaculty/{{course_name}}/pastquizzes"><div class="menu-item">Grade Quizzes</div></a>
                     <a routerLink="/coursefaculty/{{course_name}}/attendance"><div class="menu-item">Mark Attendance</div></a>
@@ -22,11 +21,7 @@
         <div  id="main-display" class="col-sm-8" >
             <p class="head-text">Grade Quizzes</p>
             <div class="available-quizzes">
-                <app-quiz-available-faculty id="available-quizzes"
-                    *ngFor="let quiz of quizzes;"
-                    [quiz]="quiz">
-                </app-quiz-available-faculty>
-                <app-quiz-available-faculty id="available-quizzes"
+            <app-quiz-available-faculty id="available-quizzes"
                 *ngFor="let quiz of quizzes;"
                 [quiz]="quiz">
             </app-quiz-available-faculty>

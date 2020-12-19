@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Subscription} from 'rxjs'
 import {ActivatedRoute} from '@angular/router'
+import { BackendService } from '../backend.service';
 
 
 @Component({
@@ -10,10 +11,10 @@ import {ActivatedRoute} from '@angular/router'
 })
 
 export class CoursefacultyPastquizzesComponent implements OnInit {
-  quizzes = Array<any>();
+  quizzes: any;
 
   private routeSub: Subscription;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private backend: BackendService ){}
 
   course_name: String;
 
@@ -23,29 +24,37 @@ export class CoursefacultyPastquizzesComponent implements OnInit {
       console.log(this.course_name);
     });
 
-    for (let index = 0; index < 4; index++) {
-      var d = new Date();
-        var month = d.getMonth();
-        var day = d.getDay();
-        let map = new Map<Number, string>();
+    var id;
+    this.backend.courses_list_share.subscribe(val => {
+      for (let index = 0; index < val.length; index++) {
+        var element: any;
+         element = val[index];
+         console.log(element.course_name, this.course_name)
+        if(element.course_name === this.course_name){
+          id = element._id;
+          break
+        }
+      }
+    });
 
-        map.set(1, "Jan"); 
-        map.set(2, "Feb");
-        map.set(3, "Mar");
-        map.set(4, "Apr");
-        map.set(5, "May");
-        map.set(6, "Jun");
-        map.set(7, "Jul");
-        map.set(8, "Aug");
-        map.set(9, "Sep");
-        map.set(10, "Oct");
-        map.set(11, "Nov");
-        map.set(11, "Dec");
+    this.backend.quizzes_list_share.subscribe(val => {
+      this.quizzes = [];
+      for (let index = 0; index < val.length; index++) {
+        var element: any = val[index]
+        console.log(element)
+        if(element.available === false){
+          this.quizzes.push(element)
+        }
+      }})
 
-      var obj = {name: "Quiz " + index.toString(), duedate: map.get(month) + " " +  day.toString() , total: 10 , desc: "Write the sum of 2 + 2"} //TODO: add available attribute from backend
-      
-      this.quizzes[index] = obj;
-    }
+    setTimeout( () => {
+      console.log(id)
+      this.backend.getQuizzesFaculty(localStorage.getItem("token")).subscribe(val => {
+        this.backend.quizzes_list.next(val.quizzes);
+      })
+    
+}, 1000);
+    
   }
 
 
@@ -53,8 +62,8 @@ export class CoursefacultyPastquizzesComponent implements OnInit {
     this.routeSub.unsubscribe();
   }
 
-  GradeQuiz(){
-    //route this to the create quiz page
-  }
+  // GradeQuiz(){
+  //   //route this to the create quiz page
+  // }
 
 }

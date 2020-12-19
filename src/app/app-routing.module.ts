@@ -17,9 +17,11 @@ import { CoursefacultyPastquizzesComponent } from './coursefaculty-pastquizzes/c
 import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 import { QuizFacultyDescComponent } from './quiz-faculty-desc/quiz-faculty-desc.component';
 import { CoursefacultygradesComponent } from './coursefacultygrades/coursefacultygrades.component';
+import { ParentcoursesComponent } from './parentcourses/parentcourses.component';
+import { CoursefacultyhomeComponent } from './coursefacultyhome/coursefacultyhome.component';
 
 const routes: Routes = [
-                        {path:'courses', component:CoursesComponent},
+                        {path:'courses', component:ParentcoursesComponent},
                         {path:'help', component:HelpComponent},
                         {path:'my-account', component:MyAccountComponent},
                         {path:'course/:id', component:CourseComponent},
@@ -34,7 +36,8 @@ const routes: Routes = [
                         {path: "coursefaculty/:id/pastquizzes", component:CoursefacultyPastquizzesComponent},
                         {path: "coursefaculty/:id/createquiz", component:CreateQuizComponent},
                         {path: "coursefaculty/:id/quizzes/:quizid", component:QuizFacultyDescComponent},
-                      {path: "coursefaculty/:id/quizzes/:quizid/grades", component:CoursefacultygradesComponent}];
+                        {path: "coursefaculty/:id/quizzes/:quizid/grades", component:CoursefacultygradesComponent},
+                        {path: "coursefaculty/:id/home", component:CoursefacultyhomeComponent}];
                         
 
 @NgModule({

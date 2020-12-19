@@ -22,7 +22,7 @@
             
             <div  class="heading">
                 <a routerLink = "/course/{{course_name}}/quizzes"><img class="back" src="../../assets/images/icons/back_button.png"></a>
-                <p class="head-text">{{quiz.name}}</p>
+                <p class="head-text">{{quiz.quiz_name}}</p>
             </div>
 
             <app-quiz-available [quiz] = quiz></app-quiz-available>
@@ -30,7 +30,7 @@
             <div *ngIf = "notyetsubmitted">
             <div class="desc">
                 <p class="desc-heading">DESCRIPTION:</p>
-                <p class="desc-text">{{quiz.desc}}</p>
+                <p class="desc-text">{{quiz.details}}</p>
             </div>
 
             <div class="luck">
@@ -42,11 +42,11 @@
             </div>
             <div>
                 <div class="btn">
-                    <input type="file">
+                    <input type="file" id="fileUpload" name="fileUpload" (change) = "onChange($event)">
                 </div>
             </div>
             <div>
-                <a routerLink = "/coursefaculty/{{course_name}}/quizzes">
+                <a>
                 <button class="btn" style="margin-left: 10px;position: absolute; bottom: 5%;width: 700px;" (click) = "submitQuiz()">Submit Quiz</button>
                 </a>
             </div>

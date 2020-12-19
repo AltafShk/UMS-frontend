@@ -25,7 +25,7 @@
 
             <div class="row">
                 <div class="col-sm-4">
-                    <p class="column-heading">Name</p>
+                    <p class="column-heading">Quiz No.</p>
                 </div>
                 <div class="col-sm-4">
                     <p class="column-heading">Score</p>
@@ -38,9 +38,9 @@
                 </div>
             </div>
             <div class="quiz-records">
-                <app-quiz-record id="quiz-marks-row"
-                    *ngFor="let quiz of quizzes;"
-                    [quiz]="quiz">
+                <app-quiz-record id="records-rows"
+                    *ngFor="let submission of submissions;"
+                    [record]="submission">
                 </app-quiz-record>
             </div>
         </div>

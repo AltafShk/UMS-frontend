@@ -6,15 +6,12 @@
     </h1>
   </div>
 
-  <div id="main-display" class="container-fluid">
-    Name: 
+  <div id="main-display" class="txt">
+    Name: {{user.firstname + " " +  user.lastname}} <br>
+    Batch: {{user.batch}}<br>
+    Username: {{user.username}}
   </div>
-  <div id="main-display" class="container-fluid">
-    Batch: 
-  </div>
-  <div id="main-display" class="container-fluid">
-    Username: 
-  </div>
+  
 
   <div class="logout-btn">
     <button (click) = "logout()">Logout User</button>

@@ -1,1 +1,28 @@
-<p>coursefacultyhome works!</p>
+<!-- Page Content -->
+<div id="page-content-wrapper">
+
+    <div class="container fluid">
+        <h1 id="page-title" class="mt-4">
+            <span style="color: pink;"> {{course_name}} </span >
+        </h1>
+</div>
+<div id="display-area" class="container fluid">
+    <div class="row">
+        <div id="main-display" class="col-sm-3">
+                <div class="list-items"><br/>
+                <nav>
+                    <a routerLink="/coursefaculty/{{course_name}}/home"><div class="menu-item">Home</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/quizzes"><div class="menu-item">Current Quizzes</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/pastquizzes"><div class="menu-item">Grade Quizzes</div></a>
+                    <a routerLink="/coursefaculty/{{course_name}}/attendance"><div class="menu-item">Mark Attendance</div></a>
+                </nav>
+                </div>
+        </div>
+        <div class=""  id="main-display" class="col-sm-8">
+            <p>This is the course home page for the course {{course_name}} offered at Some University.</p>
+        </div>
+
+    </div>
+</div>
+
+</div>

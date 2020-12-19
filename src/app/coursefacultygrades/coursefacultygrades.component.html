@@ -12,7 +12,6 @@
                 <div class="list-items"><br/>
                     <nav>
                         <a routerLink="/coursefaculty/{{course_name}}/home"><div class="menu-item">Home</div></a>
-                        <a routerLink="/coursefaculty/{{course_name}}/grades"><div class="menu-item">View Grades</div></a>
                         <a routerLink="/coursefaculty/{{course_name}}/quizzes"><div class="menu-item">Current Quizzes</div></a>
                         <a routerLink="/coursefaculty/{{course_name}}/pastquizzes"><div class="menu-item">Grade Quizzes</div></a>
                         <a routerLink="/coursefaculty/{{course_name}}/attendance"><div class="menu-item">Mark Attendance</div></a>
@@ -22,26 +21,23 @@
         <div  id="main-display" class="col-sm-8">
                         <div  class="heading">
                 <a routerLink = "/coursefaculty/{{course_name}}/quizzes"><img class="back" src="../../assets/images/icons/back_button.png"></a>
-                <p class="head-text">{{quiz.name}}</p>
+                <p class="head-text">{{quiz.quiz_name}}</p>
             </div>
 
             <div class="row no-gutters">
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <p class="column-heading">Name</p>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                     <p class="column-heading">Batch</p>
-                </div>
-                <div class="col-sm-3">
-                    <p class="column-heading">Date</p>
                 </div>
                 <div class="col-sm-2">
                     <p class="column-heading">Submission</p>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                     <p class="column-heading">Obtained</p>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                     <p class="column-heading">Total</p>
                 </div>
                 <div>
@@ -49,8 +45,8 @@
                 </div>
             </div>
             <div class="attendance-records">
-                <app-faculty-gradequiz id="attendances-row"
-                    *ngFor="let record of studentdatas;"
+                <app-faculty-gradequiz id="grades-row"
+                    *ngFor="let record of records;"
                     [studentdata]="record">
                 </app-faculty-gradequiz>
             </div>

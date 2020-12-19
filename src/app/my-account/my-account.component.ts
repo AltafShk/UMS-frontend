@@ -13,11 +13,20 @@ export class MyAccountComponent implements OnInit {
   constructor(private backend: BackendService) { }
 
   ngOnInit(): void {
-    this.backend.curr_user_share.subscribe(val => {console.log(val)})
+    
+    // if(localStorage.getItem("user") === null || localStorage.getItem("user") === undefined || localStorage.getItem("user") === ""){
+      this.backend.curr_user_share.subscribe(val => {this.user = val; localStorage.setItem("user", val); console.log(val)})
+    // }
+    // else{
+    //   this.user = localStorage.getItem("user");
+    // }
+
+      
   }
 
   logout(){
     localStorage.setItem("token", "");
+    localStorage.setItem("user", "");
   }
 
 }

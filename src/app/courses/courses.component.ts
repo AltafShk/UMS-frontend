@@ -8,6 +8,7 @@ import {BackendService} from '../backend.service'
 })
 export class CoursesComponent implements OnInit {
   courses:any;
+  user: any;
 
   constructor(private backend: BackendService) { } 
 
@@ -17,18 +18,30 @@ export class CoursesComponent implements OnInit {
       this.backend.courses_list.next(val.courses)
     })
 
+    
+
       setTimeout( () => {
           this.backend.getGrades(localStorage.getItem("token")).subscribe(val => {
-            console.log(val);
             this.backend.grades_list.next(val);
           })
-      }, 3000);   
+      }, 1000);   
       
-      setTimeout( () => {
-          this.backend.getQuizzes("5fdcd554caefdb41440c116e", localStorage.getItem("token")).subscribe(val => {
-            this.backend.quizzes_list.next(val);
-          })
+    //   setTimeout( () => {
+    //       this.backend.getQuizzes("5fdcd554caefdb41440c116e", localStorage.getItem("token")).subscribe(val => {
+    //         this.backend.quizzes_list.next(val);
+    //       })
         
-    }, 3000);
-    }    
+    // }, 1000);
+
+    setTimeout( () => {
+      this.backend.getStudents().subscribe(val => {
+        this.backend.students_list.next(val);
+      })
+}, 1000);
+
+setTimeout( () => {
+  this.backend.curr_user_share.subscribe(val => this.user = val)
+}, 1000);
+    }
+
 }

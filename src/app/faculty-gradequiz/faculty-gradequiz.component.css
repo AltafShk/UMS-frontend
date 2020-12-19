@@ -16,3 +16,17 @@
     margin-right: auto;
     width: 50%;
   }
+
+  .score{
+      background-color: none;
+      background: transparent;
+      width: 40px;
+      margin-left: 30px;
+      margin-top: 10px;
+      color: whitesmoke;
+  }
+
+  .update{
+      background-color: palevioletred;
+      margin-top: 12px;
+  }

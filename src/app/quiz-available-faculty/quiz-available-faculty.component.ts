@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Subscription} from 'rxjs'
 import {ActivatedRoute} from '@angular/router'
+import { BackendService } from '../backend.service';
 
 @Component({
   selector: 'app-quiz-available-faculty',
@@ -14,7 +15,7 @@ export class QuizAvailableFacultyComponent implements OnInit {
   course_name: String;
 
   private routeSub: Subscription;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private backend: BackendService) {}
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
@@ -27,8 +28,12 @@ export class QuizAvailableFacultyComponent implements OnInit {
     this.routeSub.unsubscribe();
   }
 
-  deleteQuiz(){
-    //delete quiz from backend
+  lockQuiz(){
+    this.backend.lockingQuiz(this.quiz._id, localStorage.getItem("token")).subscribe(val => {
+      console.log(val);
+      this.backend.quizzes_list.next(val.quizzes);
+    })
+   
   }
 
 

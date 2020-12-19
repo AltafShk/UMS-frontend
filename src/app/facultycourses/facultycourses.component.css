@@ -6,6 +6,10 @@
     font-weight: bold;
 }
 
+app-course-card {float:left; margin:20px;}
+
+#class-card{float:left;}
+
 #main-display {
     margin-left: 60px;
     background: url('../../assets/images/blur bg.png');
@@ -14,23 +18,13 @@
     min-height: 80vh;
     width: 85vw;
     border:1px solid black;
-    color: white;
-    padding: 20px;
 }
 
-.logout-btn{
-    position: absolute;
-    top: 50%;
-    left: 48%;
-    
-}
-
-button{
-    background-color: palevioletred;
-}
-
-.txt{
-    font-size: 20px;
-    color: antiquewhite;
+.course-card {
+    float: left;
+    height: 180px;
+    width: 150px;
+    border: 1px solid black;
+    margin: 10px;
 }
 

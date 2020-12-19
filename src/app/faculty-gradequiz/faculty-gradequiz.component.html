@@ -1,22 +1,22 @@
 <div class="row no-gutters" style="width: 102%">
-    <div class="col-sm-3 ">
-        <p class="column-heading">{{studentdata.name}}</p>
+    <div class="col-sm-2 ">
+        <p class="column-heading">{{studentdata.student.firstname + " " + studentdata.student.lastname}}</p>
     </div>
-    <div class="col-sm-1">
-        <p class="column-heading">{{studentdata.batch}}</p>
-    </div>
-    <div class="col-sm-3">
-        <p class="column-heading">{{studentdata.date}}</p>
+    <div class="col-sm-2">
+        <p class="column-heading">{{studentdata.student.batch}}</p>
     </div>
     <div class="col-sm-2">
 
-        <a href= "javascript:void(0)" class="column-heading center" (click)="downloadSubmission()"> <img src="../../assets/images/icons/download.png" width="15px" height="15px" >
+        <a href= "http://localhost:3080/{{path}}" class="column-heading center"> <img src="../../assets/images/icons/download.png" width="15px" height="15px" >
         </a>
     </div>
-    <div class="col-sm-1">
-        <p class="column-heading">{{studentdata.score}}</p>
+    <div class="col-sm-2">
+        <input [(ngModel)] = "Score" class="score">
+    </div>
+    <div class="col-sm-2">
+        <p class="column-heading">20</p>
     </div>
     <div class="col-sm-1">
-        <p class="column-heading">{{studentdata.total}}</p>
+        <button (click) = "updateMarks()" class="update">Update</button>
     </div>
 </div>

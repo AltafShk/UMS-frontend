@@ -2,16 +2,13 @@
     <div class="box"> 
         <div class = "texts">
             <div class="quiz-name">
-                <a routerLink = "/coursefaculty/{{course_name}}/quizzes/{{quiz.name}}"  [state] = quiz><p class="name">{{quiz.name}}</p></a>
-            </div>
-            <div class="quiz-date">
-                <p class="date">DUE: {{quiz.duedate}}</p>
+                <a routerLink = "/coursefaculty/{{course_name}}/quizzes/{{quiz.name}}/grades"  [state] = quiz><p class="name">{{quiz.quiz_name}}</p></a>
             </div>
         </div>
 
         <div class="icons">
             <a href="javascript:void(0)">
-            <img src="../../assets/images/icons/trashcan.png" (click)= "deleteQuiz()" width="20px" height="30px" class="trash">
+            <img src="../../assets/images/icons/lock.png" (click)= "lockQuiz()" width="20px" height="20px" style="margin-bottom: 20px;" class="trash">
         </a >
         </div>
         

@@ -30,6 +30,9 @@ export class BackendService {
   public quizzes_list = new BehaviorSubject("");
   public quizzes_list_share = this.quizzes_list.asObservable();
 
+  public students_list = new BehaviorSubject("");
+  public students_list_share = this.students_list.asObservable();
+
 
   initialData(){
     var data;
@@ -37,6 +40,30 @@ export class BackendService {
     return data;
   }
 
+  getUser(token){
+    var data;
+    data = this.http.get(this.rootURL + "/users/autheduser", {headers: {Authorization: `Bearer ${token}`}});
+    console.log("herererer", data);
+    return data;
+  }
+
+  getStudents(){
+    var data;
+    data = this.http.get(this.rootURL + "/users");
+    return data;
+  }
+
+  createQuiz(quiz_name, total_marks, course_name, details, token){
+    var data;
+    data = this.http.post(this.rootURL + '/quizzes/addquiz', {quiz_name, total_marks, course_name, details}, {headers: {Authorization: `Bearer ${token}`}})
+    return data;
+  }
+
+  getQuizzesFaculty(token){
+    var data;
+    data = this.http.get(this.rootURL + '/quizzes', {headers: {Authorization: `Bearer ${token}`}})
+    return data;
+  }
 
   addCourses(){
     var data;
@@ -66,7 +93,47 @@ export class BackendService {
   getQuizzes(course_id, token){
     console.log(course_id, token);
     var data;
+    console.log(course_id)
     data = this.http.get(this.rootURL + "/quizzes/" + course_id, {headers: {Authorization: `Bearer ${token}`}})
+    return data;
+  }
+  
+  getSubmissions(quiz_id, token){
+    console.log(quiz_id, token)
+    var data;
+    data = this.http.get(this.rootURL + "/grades/quiz/" + quiz_id, {headers: {Authorization: `Bearer ${token}` }})
+    return data;
+  }
+
+  lockingQuiz(quiz_id, token){
+    console.log(token)
+    var data;
+    data = this.http.put(this.rootURL + "/quizzes/endquiz", {quiz_id} , {headers: {Authorization: `Bearer ${token}` }})
+    return data;
+  }
+
+  updateGrade(obtained_marks, student_id, quiz_id, course_id, token){
+    var data;
+    data = this.http.put(this.rootURL + "/grades/setgrade", {obtained_marks, student_id, quiz_id, course_id}, {headers: {Authorization: `Bearer ${token}` }})
+    return data;
+  }
+
+  getStudentgrades(course_id, token){
+    var data;
+    data = this.http.get(this.rootURL + "/grades/studentgrades/" + course_id, {headers: {Authorization:  `Bearer ${token}`}})
+    return data;
+  }
+
+  sendFile(formData, course_id, quiz_id, token){
+    console.log(formData, course_id, quiz_id, token)
+    var data;
+    data = this.http.post(this.rootURL + '/grades/' + course_id + '/' +  quiz_id, formData, {
+      headers: {Authorization: `Bearer ${token}`},
+      reportProgress: true,
+      observe: 'events',
+      // "contentType": false,
+      // "processData": false
+    })
     return data;
   }
 }

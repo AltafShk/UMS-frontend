@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Subscription} from 'rxjs'
 import {ActivatedRoute} from '@angular/router'
+import { BackendService } from '../backend.service';
 
 @Component({
   selector: 'app-coursefacultygrades',
@@ -10,12 +11,10 @@ import {ActivatedRoute} from '@angular/router'
 export class CoursefacultygradesComponent implements OnInit {
   
 
-  studentdatas = [{name:"Pablo escobar", batch:"2022", date: "September/6/2020", submission:"asd", score:"5", total:10},
-  {name:"John Travolta", batch:"2022", date: "September/6/2020", submission:"asd", score:"2", total:10},
-  {name:"Ammar Khalid", batch:"2022", date: "September/6/2020", submission:"asd", score:"3", total:10},]
+  records: any;
 
   private routeSub: Subscription;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private backend: BackendService) { }
 
   course_name: String;
   quiz: any;
@@ -28,6 +27,26 @@ export class CoursefacultygradesComponent implements OnInit {
         this.course_name = params['id'];
       });
       this.quiz = history.state;
+
+      this.backend.getSubmissions(this.quiz._id, localStorage.getItem("token")).subscribe(data => {
+        console.log(data)
+        var submissions: any = data.submission;
+        var students: any = data.students;
+        var temp = [];
+        this.records = [];
+        for (let index = 0; index < students.length; index++) {
+          var element = students[index];
+          for (let index2 = 0; index2 < submissions.length; index2++) {
+            var element2 = submissions[index2];
+            if(element._id === element2.student._id){
+              console.log("pushing")
+              temp.push(element2)
+              break;
+            }
+          }
+        }
+        this.records = temp;
+      })
     });
 
     

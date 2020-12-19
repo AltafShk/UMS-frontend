@@ -32,7 +32,7 @@
                     <p>Quiz name: </p>
                 </div>
                 <div class="col-sm-6">
-                    <input size ="30" type="text" id="qname" name="qname" style=" border: 2px solid palevioletred">
+                    <input [(ngModel)] = "quiz_name" size ="30" type="text" id="qname" name="qname" style=" border: 2px solid palevioletred">
                 </div>
                 </div >
                 <div class="row">
@@ -40,7 +40,7 @@
                         <p>Total Marks: </p>
                     </div>
                     <div class="col-sm-6 " >
-                        <input size ="20" type="number" id="marks" name="marks" style=" border: 2px solid palevioletred">
+                        <input [(ngModel)] = "marks" size ="20" type="number" id="marks" name="marks" style=" border: 2px solid palevioletred">
                     </div>
                 </div >
                 <div class="row">
@@ -48,7 +48,7 @@
                         <p>Due Date:</p>
                     </div>
                     <div class= "col-sm-6">
-                        <input type="date" id="quizdate" name="quizdate" style=" border: 2px solid palevioletred">
+                        <input [(ngModel)] = "date" type="date" id="quizdate" name="quizdate" style=" border: 2px solid palevioletred">
                     </div>
                 </div>
                 <div>
@@ -56,17 +56,13 @@
                         <p>Description:</p>
                     </div>
                     <div>
-                        <input class="textarea" id="qdisc" name="qdisc" >
+                        <input [(ngModel)] = "desc" class="textarea" id="qdisc" name="qdisc" >
                     </div>
-                </div>
-
-                <div class="btn">
-                    <input type="file">
                 </div>
 
             </div>
             <div style="float: right; margin-bottom: 5px;" >
-                <button class="btn"> Create quiz!</button>
+                <button (click) = "Createquiz()" class="btn"> Create quiz!</button>
             </div>
 
             
